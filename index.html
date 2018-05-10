@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telphone=no, email=no, address=no" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <p>无连接</p>
+        </header>
+        <main class="main">
+            <ul class="ul" id="ul">
+                <li>
+                    <p class="yi"><i class="iconfont icon-shouye"></i></p>
+                    <p class="zi">首页</p>
+                </li>
+                <li>
+                    <p class="yi"><i class="iconfont icon-gongzuo"></i></p>
+                    <p class="zi">菜单</p>
+                </li>
+                <li>
+                    <p class="yi"><i class="iconfont icon-gouwuche"></i></p>
+                    <p class="zi">购物</p>
+                </li>
+                <li>
+                    <p class="yi"><i class="iconfont icon-set"></i></p>
+                    <p class="zi">设置</p>
+                </li>
+            </ul>
+            <ol class="ol" id="ol">
+                <li class="se">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+        </main>
+    </div>
+    <script>
+        var uli = document.querySelectorAll('#ul>li')
+        var oli = document.querySelectorAll('#ol>li')
+        for(var i=0;i<uli.length;i++){
+            (function(n){
+                uli[n].onclick = function(){
+                    for(var i=0;i<oli.length;i++){
+                        oli[i].style.display = 'none';
+                        uli[i].style.background = '';
+                    }
+                    oli[n].style.display = ' block';
+                    uli[n].style.background = 'yellow';
+                }
+            })(i);
+        }
+    </script>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+    </script>
+</body>
+</html>
