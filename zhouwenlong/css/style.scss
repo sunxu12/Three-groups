@@ -1,0 +1,144 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: .14rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "楷体";
+    text-size-adjust: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 625%;
+}
+
+img,
+div,
+body,
+html,
+ul,
+li,
+a {
+    -webkit-touch-callout: none;
+}
+
+input,
+button {
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: .5rem;
+    background: #46D264;
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .1rem;
+        a {
+            line-height: .5rem;
+            color: #fff;
+            &:nth-child(2) {
+                font-size: .2rem;
+            }
+        }
+    }
+}
+
+.box {
+    width: 100%;
+    height: 1.3rem;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.section {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.dll {
+    margin-top: .05rem;
+    height: 1rem;
+    padding: .05rem;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    dt {
+        width: 1rem;
+        height: .85rem;
+        img {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    }
+    dd {
+        padding-left: .1rem;
+        line-height: .23rem;
+    }
+}
+
+.swiper-pagination {
+    // background: #CCCCCC;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    width: .85rem;
+    border-radius: 0;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #33CC66;
+}
